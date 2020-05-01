@@ -8,6 +8,8 @@ class SorterFactory:
         self.algorithms ={}
         self.algorithms['InsertionSort'] = InsertionSorter()
         self.algorithms['MergeSort'] = MergeSorter()
+        self.algorithms['BubbleSort'] = MergeSorter()
+
 
     def getSorter(self, algorithm) -> Sorter:
         return self.algorithms[algorithm]
