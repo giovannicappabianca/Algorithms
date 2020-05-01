@@ -13,7 +13,7 @@ class SortingAlgorithmTester():
     
     def integer_values_test(self):
         s = self.sf.getSorter(self.config.get('SortingAlgorithm','algorithm'))
-        a = [31, 41, 59, 26, 41, 58]
+        a = [31, 41, 59, 26, 41, 58, 70, 3, 7]
         s.sort(a, self.config.getboolean('SortingAlgorithm','asc_order'))
         self.logger.info(a)
 
