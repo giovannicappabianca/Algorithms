@@ -1,4 +1,4 @@
-from Sorter import Sorter
+from src.SortingAlgorithm.Sorter import Sorter
 
 class InsertionSorter(Sorter):
     

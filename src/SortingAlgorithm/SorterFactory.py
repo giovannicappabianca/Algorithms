@@ -1,5 +1,5 @@
-from Sorter import Sorter
-from InsertionSorter import InsertionSorter
+from src.SortingAlgorithm.Sorter import Sorter
+from src.SortingAlgorithm.InsertionSorter import InsertionSorter
 
 class SorterFactory:
 
