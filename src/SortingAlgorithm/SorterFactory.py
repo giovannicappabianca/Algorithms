@@ -1,6 +1,8 @@
 from src.SortingAlgorithm.Sorter import Sorter
 from src.SortingAlgorithm.InsertionSorter import InsertionSorter
 from src.SortingAlgorithm.MergeSorter import MergeSorter
+from src.SortingAlgorithm.BubbleSorter import BubbleSorter
+from src.SortingAlgorithm.HeapSorter import HeapSorter
 import src.UtilitiesSingleton
 
 class SorterFactory:
@@ -11,8 +13,8 @@ class SorterFactory:
         self.algorithms ={}
         self.algorithms['InsertionSort'] = InsertionSorter()
         self.algorithms['MergeSort'] = MergeSorter()
-        self.algorithms['BubbleSort'] = MergeSorter()
-        self.algorithms['HeapSort'] = MergeSorter()
+        self.algorithms['BubbleSort'] = BubbleSorter()
+        self.algorithms['HeapSort'] = HeapSorter()
 
 
     def getSorter(self, algorithm) -> Sorter:
