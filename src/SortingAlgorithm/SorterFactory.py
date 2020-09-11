@@ -11,15 +11,15 @@ class SorterFactory:
         self.logger = src.UtilitiesSingleton.Logger().getLogger(type(self).__name__)
 
         self.algorithms ={}
-        self.algorithms['InsertionSort'] = InsertionSorter()
-        self.algorithms['MergeSort'] = MergeSorter()
-        self.algorithms['BubbleSort'] = BubbleSorter()
-        self.algorithms['HeapSort'] = HeapSorter()
+        self.algorithms['insertionsort'] = InsertionSorter()
+        self.algorithms['mergesort'] = MergeSorter()
+        self.algorithms['bubblesort'] = BubbleSorter()
+        self.algorithms['heapsort'] = HeapSorter()
 
 
     def getSorter(self, algorithm) -> Sorter:
         self.logger.info('Selected {0} algorithm'.format(algorithm))
-        return self.algorithms[algorithm]
+        return self.algorithms[algorithm.lower()]
 
 
 

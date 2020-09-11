@@ -1,0 +1,1 @@
+protoc -I=test\SortingAlgorithm --python_out=test\SortingAlgorithm test\SortingAlgorithm\InputTester.proto

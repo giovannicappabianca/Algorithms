@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package test.SortingAlgorithm;
+
+
+message InputTest {
+    
+    SortingAlgorithm sortingAlgorithm = 1;
+    bool is_asc = 2;
+    repeated int32 input_list = 3;
+
+} 
+
+enum SortingAlgorithm {
+    BUBBLESORT = 0;
+    HEAPSORT = 1;
+    INSERTIONSORT = 2;
+    MERGESORT = 3;
+}
