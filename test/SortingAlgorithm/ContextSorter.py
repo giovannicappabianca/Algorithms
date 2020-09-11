@@ -43,7 +43,7 @@ class SortingAlgorithmTester():
     def createInstanceTestFile(self, filename):
 
         testInstance = InputTester_pb2.InputTest()
-        testInstance.sortingAlgorithm = InputTester_pb2.BUBBLESORT
+        testInstance.sortingAlgorithm = InputTester_pb2.QUICKSORT
         testInstance.is_asc=True
         testInstance.input_list.extend([31, 41, 59, 26, 41, 58, 70, 3, 7])
 

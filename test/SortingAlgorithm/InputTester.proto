@@ -16,4 +16,5 @@ enum SortingAlgorithm {
     HEAPSORT = 1;
     INSERTIONSORT = 2;
     MERGESORT = 3;
+    QUICKSORT = 4;
 }

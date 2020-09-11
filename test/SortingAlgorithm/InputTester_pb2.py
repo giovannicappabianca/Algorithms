@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x11InputTester.proto\x12\x15test.SortingAlgorithm\"r\n\tInputTest\x12\x41\n\x10sortingAlgorithm\x18\x01 \x01(\x0e\x32\'.test.SortingAlgorithm.SortingAlgorithm\x12\x0e\n\x06is_asc\x18\x02 \x01(\x08\x12\x12\n\ninput_list\x18\x03 \x03(\x05*R\n\x10SortingAlgorithm\x12\x0e\n\nBUBBLESORT\x10\x00\x12\x0c\n\x08HEAPSORT\x10\x01\x12\x11\n\rINSERTIONSORT\x10\x02\x12\r\n\tMERGESORT\x10\x03\x62\x06proto3'
+  serialized_pb=b'\n\x11InputTester.proto\x12\x15test.SortingAlgorithm\"r\n\tInputTest\x12\x41\n\x10sortingAlgorithm\x18\x01 \x01(\x0e\x32\'.test.SortingAlgorithm.SortingAlgorithm\x12\x0e\n\x06is_asc\x18\x02 \x01(\x08\x12\x12\n\ninput_list\x18\x03 \x03(\x05*a\n\x10SortingAlgorithm\x12\x0e\n\nBUBBLESORT\x10\x00\x12\x0c\n\x08HEAPSORT\x10\x01\x12\x11\n\rINSERTIONSORT\x10\x02\x12\r\n\tMERGESORT\x10\x03\x12\r\n\tQUICKSORT\x10\x04\x62\x06proto3'
 )
 
 _SORTINGALGORITHM = _descriptor.EnumDescriptor(
@@ -50,11 +50,16 @@ _SORTINGALGORITHM = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='QUICKSORT', index=4, number=4,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
   serialized_start=160,
-  serialized_end=242,
+  serialized_end=257,
 )
 _sym_db.RegisterEnumDescriptor(_SORTINGALGORITHM)
 
@@ -63,6 +68,7 @@ BUBBLESORT = 0
 HEAPSORT = 1
 INSERTIONSORT = 2
 MERGESORT = 3
+QUICKSORT = 4
 
 
 
