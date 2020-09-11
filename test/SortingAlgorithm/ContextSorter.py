@@ -1,6 +1,7 @@
 from src.SortingAlgorithm.Sorter import Sorter
 from src.SortingAlgorithm.SorterFactory import SorterFactory
 import InputTester_pb2 as InputTester_pb2
+from src.SortingAlgorithm.StringInputAdapter import StringInputAdapter
 
 import src.UtilitiesSingleton
 import os
@@ -71,8 +72,33 @@ class SortingAlgorithmTester():
             i = i + 1
         if wrong : self.logger.error("sorting did not work as expected. Check result")
 
+    def string_values_test_with_protobuf(self, filename):
+        with open(filename, "rb") as f:
+            testInstance = InputTester_pb2.InputTest().FromString(f.read())
+
+        s = self.sf.getSorter(InputTester_pb2.SortingAlgorithm.Name(testInstance.sortingAlgorithm))
+        #a = testInstance.input_list
+        lista = ["abc", "abz", "abvmmfrt", "ace", "acef"]
+        sia = StringInputAdapter()
+        result = sia.sortStringCollection(lista, s, testInstance.is_asc)
+
+        print(result)
+        self.logger.info(result)
+
+        '''self.logger.info('before sorting {}'.format(a))
+        s.sort(a, testInstance.is_asc)
+        self.logger.info('after: {}'.format(a))
+        i = 1
+        wrong = False
+        while i < len(a) and not(wrong):
+            if a[i-1] > a[i]:
+                wrong = True
+            i = i + 1
+        if wrong : self.logger.error("sorting did not work as expected. Check result")'''
+
 filename = "instanceTest.bin"
 sat = SortingAlgorithmTester()
+sat.string_values_test_with_protobuf(filename)
 #sat.integer_values_test_from_config_file()
-sat.createInstanceTestFile(filename) #create file with protobuf
-sat.integer_values_test_with_protobuf(filename) # test instance on protobuf bin file
+#sat.createInstanceTestFile(filename) #create file with protobuf
+#sat.integer_values_test_with_protobuf(filename) # test instance on protobuf bin file
